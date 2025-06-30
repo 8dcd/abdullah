@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>رسالة وردية</title>
+  <style>
+    body {
+      background-color: #f9c9d2; /* لون الخلفية الوردي */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .envelope {
+      max-width: 300px;
+      transition: opacity 0.5s ease;
+    }
+
+    #open-envelope {
+      display: none;
+      margin-top: 20px;
+    }
+
+    #open-button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #ffffff;
+      color: #d97a94;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s;
+    }
+
+    #open-button:hover {
+      background-color: #f080cb;
+    }
+  </style>
+</head>
+<body>
+
+  <img id="closed-envelope" class="envelope" src="close.jpg" alt="الظرف مغلق">
+  
+  <img id="open-envelope" class="envelope" src="open.jpg" alt="الظرف مفتوح">
+
+  <button id="open-button" onclick="openEnvelope()">open the envelope 💌</button>
+
+  <script>
+    function openEnvelope() {
+      document.getElementById('closed-envelope').style.display = 'none';
+      document.getElementById('open-envelope').style.display = 'block';
+      document.getElementById('open-button').style.display = 'none';
+    }
+  </script>
+
+</body>
+</html>
